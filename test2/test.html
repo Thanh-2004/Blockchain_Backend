@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+</head>
+<body>
+    <h1>Search Engine</h1>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" name="query" placeholder="Enter your search query">
+        <button type="submit">Search</button>
+    </form>
+    <div id="searchResults"></div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var query = document.getElementById('searchQuery').value;
+            fetch('/search?query=' + encodeURIComponent(query))
+            .then(response => response.json())
+            .then(data => {
+                var searchResultsDiv = document.getElementById('searchResults');
+                searchResultsDiv.innerHTML = '';
+                data.forEach(function(result) {
+                    var resultItem = document.createElement('div');
+                    resultItem.textContent = 'Document ID: ' + result[0] + ', Score: ' + result[1];
+                    searchResultsDiv.appendChild(resultItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

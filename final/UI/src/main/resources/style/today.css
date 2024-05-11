@@ -1,0 +1,6 @@
+.search {
+
+    -fx-border-color: #ccc; /* border color */
+    -fx-border-radius: 10; /* border radius */
+    -fx-padding: 5 10; /* padding */
+}

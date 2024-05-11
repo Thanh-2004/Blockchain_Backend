@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #020013;"
+            stylesheets="@../style/today.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.OOP_Project.Controller.TodayController">
+    <ScrollPane hbarPolicy="NEVER" prefHeight="700.0" prefWidth="1000.0" vbarPolicy="NEVER">
+        <Pane prefWidth="1000.0" style="-fx-background-color: #020013;">
+            <Label layoutX="228.0" layoutY="126.0" text="YOUR" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="38.0" />
+                </font>
+            </Label>
+            <Label layoutX="348.0" layoutY="126.0" text="BEST SEARCHING TOOL">
+                <font>
+                    <Font name="System Bold" size="38.0" />
+                </font>
+                <textFill>
+                    <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                        <stops>
+                            <Stop>
+                                <color>
+                                    <Color red="0.5254902243614197" green="0.19607843458652496" blue="0.7411764860153198" />
+                                </color>
+                            </Stop>
+                            <Stop offset="1.0">
+                                <color>
+                                    <Color red="0.8196078538894653" green="0.239215686917305" blue="0.5686274766921997" />
+                                </color>
+                            </Stop>
+                        </stops>
+                    </LinearGradient>
+                </textFill>
+            </Label>
+            <VBox fx:id="laterContainer" layoutX="163.0" layoutY="233.0" prefHeight="600.0" prefWidth="675.0" spacing="15.0">
+                <Pane prefHeight="200.0" prefWidth="200.0" />
+
+            </VBox>
+        </Pane>
+    </ScrollPane>
+
+    <fx:include layoutX="50.0" layoutY="30.0" source="Header.fxml" />
+    <fx:include fx:id="detail" visible="false" source="Detail.fxml"/>
+</AnchorPane>

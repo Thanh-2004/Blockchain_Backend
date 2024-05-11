@@ -1,0 +1,13 @@
+.pane {
+    -fx-background-image: url('../image/background.png');
+    -fx-background-size: cover;
+}
+.butt {
+    -fx-background-color: #6FB3E0; /* Màu nền */
+    -fx-text-fill: white; /* Màu chữ */
+    -fx-font-size: 14px; /* Cỡ chữ */
+    -fx-font-family: "Arial"; /* Font chữ */
+    -fx-font-weight: bold; /* Độ đậm chữ */
+    -fx-padding: 10 20; /* Độ dày viền (trên/dưới trái/phải) */
+    -fx-background-radius: 20; /* Bo tròn góc nút */
+}

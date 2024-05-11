@@ -1,0 +1,5 @@
+.butt {
+    -fx-background-color: #8ac1d1; /* Màu nền */
+    -fx-padding: 5 20; /* Độ dày viền (trên/dưới trái/phải) */
+    -fx-background-radius: 15; /* Bo tròn góc nút */
+}
